@@ -24,8 +24,9 @@ The covariance matrix is estimated in a robust (MCD) and non robust way and then
  \item{cor.rob}{correlation of the robust estimation}
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 data(chorizon)
 Be=chorizon[,"Be"]

@@ -38,8 +38,9 @@ add = FALSE, plot = TRUE, ...)
 Each polygon represents one row of the input x. For the variables the values are computed and then those values are connected with a polygon. The location of the polygons can be defined by the user.
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 data(ohorizon)
 X=ohorizon[,"XCOO"]

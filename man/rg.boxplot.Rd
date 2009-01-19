@@ -23,8 +23,9 @@ wend = 0.05, xlim = NULL, main = " ", colr = 5, ...)
 As the x-axis is shortend by setting xlim, however, the statistics used to define the boxplot, or box-and-whisker plot, are still based on the total data set. To plot a truncated data set create a subset first, or use the x[x<some.value] construct in the call.
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 data(chorizon)
 Ba=chorizon[,"Ba"]

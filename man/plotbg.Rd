@@ -20,8 +20,6 @@ map.col = c(5, 1, 3, 4), map.lwd = c(2, 1, 2, 1), add.plot = FALSE, ...)
 \details{
 Plots the background map of Kola
 }
-\author{Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
-\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \references{
 Reimann C, Äyräs M, Chekushin V, Bogatyrev I, Boyd R, Caritat P de, Dutter R,
 Finne TE, Halleraker JH, Jæger Ø, Kashulina G, Lehto O, Niskavaara H, Pavlov V,
@@ -29,6 +27,8 @@ Räisänen ML, Strand T, Volden T. Environmental Geochemical Atlas of the Central
 Barents Region. NGU-GTK-CKE Special Publication, Geological Survey of Norway,
 Trondheim, Norway, 1998.
 }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 data(kola.background)
 plotbg()

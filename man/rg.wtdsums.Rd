@@ -26,8 +26,9 @@ rg.wtdsums(x, ri, xcentr = NULL, xdisp = NULL)
   \item{ws}{normalized weights times standardized x}
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 data(chorizon)
 var=c("Si_XRF","Al_XRF","K_XRF","LOI","P","Mn")

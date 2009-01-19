@@ -13,7 +13,6 @@
 \alias{EDAacc.symbol}
 \alias{EDAext.size}
 \alias{EDAext.symbol}
-\alias{edaplot} 
 \alias{EDA.size}
 \alias{EDA.symbol}
 \alias{GSC.size}

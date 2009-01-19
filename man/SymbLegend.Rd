@@ -37,8 +37,9 @@ If type="percentile" the pre-determined quantiles of the data are computed and a
 If type="boxplot" a boxplot is computed and the values were taken to group the values fot the plot and the legend. In the case that a log scale is used the function boxplotlog is used instead of boxplot.
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 data(chorizon)
 data(kola.background)

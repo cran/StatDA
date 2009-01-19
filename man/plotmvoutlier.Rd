@@ -33,8 +33,9 @@ The function computes a robust estimation of the covariance and then the Mahalan
   \item{euclidean}{the Euclidean distance of the scaled data}
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at>}
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \seealso{ \code{\link{plotbg}}, \code{\link[robustbase]{covMcd}}, \code{\link{arw}} }
 \examples{
 data(moss)

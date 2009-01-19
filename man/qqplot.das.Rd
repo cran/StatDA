@@ -25,8 +25,9 @@ qqplot.das(x, distribution = "norm", ylab = deparse(substitute(x)), xlab = paste
 The probability of the input data is computed and with this result the quantiles of the comparison distribution are calculated. If line="quartiles" a line based on quartiles is plotted and if line="robust" a robust LM model is calculated.
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \seealso{ \code{\link{par}} }
 \examples{
 data(AuNEW)

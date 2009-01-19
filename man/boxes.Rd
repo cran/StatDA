@@ -49,8 +49,9 @@ mar = pmin(par("mar"), 1.1 + c(2 * axes + (xlab != ""), 2 * axes + (ylab != ""),
   This type of graphical approach for multivariate data is only applicable where the data can be grouped into three clusters. This means that before the plot can be made the data undergo a hierarchical cluster to get the size of each cluster. The distance measure for the hierarchicla cluster is complete linkage. Each cluster represents one side of the boxes.
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \seealso{ \code{\link{plot.default}},\code{\link{box}} }
 \examples{
 #plots the background and the boxes for the elements

@@ -38,8 +38,9 @@ add = FALSE, plot = TRUE, ...)
 Each sun represents one row of the input x. Each line of the sun represents one choosen element. The distance from the center of the sun to the point shows the size of the value of the (scaled) column.
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 data(ohorizon)
 X=ohorizon[,"XCOO"]

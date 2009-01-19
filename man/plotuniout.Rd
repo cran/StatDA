@@ -24,8 +24,9 @@ pch2 = c(3, 1), cex2 = c(0.7, 0.4), col2 = c(1, 1), lcex.fac = 1, ...)
   \item{euclidean}{the Euclidean distance of the scaled data}
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \seealso{ \code{\link{arw}}, \code{\link[robustbase]{covMcd}} }
 \examples{
 data(moss)

@@ -34,8 +34,9 @@ Takes the information provided by the argument boxinfo and plots a boxplot corre
   Plots the legend with respect to the boxplot and returns the symbols, size and the quantiles used for the legend.
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 #internal function, used in SymbLegend}
 % Add one or more standard keywords, see file 'KEYWORDS' in the

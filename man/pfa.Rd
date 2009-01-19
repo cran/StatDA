@@ -37,8 +37,9 @@ rotation = "varimax", maxiter = 5, control = NULL, ...)
  \item{STATISTIC, PVAL}{The significance-test statistic and p-value, if can be computed}
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmose@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 data(moss)
 var=c("Ni","Cu","Mg","Rb","Mn")

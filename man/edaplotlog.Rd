@@ -43,8 +43,9 @@ First the histogram, boxplot/boxplotlog and density is calculate and then the pl
   \item{B}{results of boxplotlog}
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \seealso{ \code{\link{plot}},\code{\link{boxplot}}, \code{\link{boxplotlog}}, \code{\link{hist}}, \code{\link{points}} }
 \examples{
 data(chorizon)

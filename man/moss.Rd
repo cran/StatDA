@@ -83,6 +83,8 @@ Räisänen ML, Strand T, Volden T. Environmental Geochemical Atlas of the Central
 Barents Region. NGU-GTK-CKE Special Publication, Geological Survey of Norway,
 Trondheim, Norway, 1998.
 }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 data(moss)
 str(moss)

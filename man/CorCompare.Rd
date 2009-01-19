@@ -22,8 +22,9 @@ cex.label = 1.1, cex.legend = 1.2, lwd.legend = 1.2, cex.cor = 1, ...)
 The ellipses are plotted with the function do.ellipses. Therefore the radius is calculated with singular value decomposition.
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ Peter Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 data(chorizon)
 x=chorizon[,c("Ca","Cu","Mg","Na","P","Sr","Zn")]

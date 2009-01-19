@@ -39,8 +39,9 @@ leg.perc.yshift = 20000, tit.xshift = 35000)
 Based on a variogram model a interpolation of the spatial data is computed. The variogram has to be provided by the user and based on this model the spatial prediction is made. To distinguish between different values every predicted value is plotted in his own scale of the choosen colour.
 }
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
-   Explained. Applied Environmental Statistics with R. John Wiley and Sons Inc. To appear. }
-\author{ P.Filzmoser <P.Filzmoser@tuwien.ac.at> }
+   Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
+\author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
+\url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 data(chorizon)
 data(kola.background)

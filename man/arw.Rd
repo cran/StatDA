@@ -39,7 +39,7 @@ of the data x.
 \url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \references{P. Filzmoser, R.G. Garrett, and C. Reimann (2005).
 Multivariate outlier detection in exploration geochemistry.
-\emph{Computers & Geosciences}.}
+\emph{Computers & Geosciences}, 31:579-587.}
 
 \examples{
 x <- cbind(rnorm(100), rnorm(100))
