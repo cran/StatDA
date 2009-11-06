@@ -1,6 +1,6 @@
 \name{concarea}
 \alias{concarea}
-\title{ Plot Contentration Area }
+\title{ Plot Concentration Area }
 \description{
   Displays a concentration-area plot (see also concareaExampleKola). This function is preferable since it can be applied to non-Kola data!
 }

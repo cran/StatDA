@@ -5,7 +5,7 @@
   A QQ (Quantile-Quantile) plot is produced.
 }
 \usage{
-qqplot.das(x, distribution = "norm", ylab = deparse(substitute(x)), xlab = paste(distribution, "quantiles"), main = "", las = par("las"), datax = FALSE, envelope = 0.95, labels = FALSE, col = palette()[2], lwd = 2, pch = 1, line = c("quartiles", "robust", "none"), cex = 1, xaxt = "s", ...)
+qqplot.das(x, distribution = "norm", ylab = deparse(substitute(x)), xlab = paste(distribution, "quantiles"), main = "", las = par("las"), datax = FALSE, envelope = 0.95, labels = FALSE, col = palette()[2], lwd = 2, pch = 1, line = c("quartiles", "robust", "none"), cex = 1, xaxt = "s", add.plot=FALSE,xlim=NULL,ylim=NULL,...)
 }
 \arguments{
   \item{x}{ numeric vector }
@@ -19,6 +19,9 @@ qqplot.das(x, distribution = "norm", ylab = deparse(substitute(x)), xlab = paste
   \item{labels}{ vector of point labels for interactive point identification, or FALSE for no labels }
   \item{col, lwd, pch, cex, xaxt }{ graphical parameter, see par }
   \item{line}{ "quartiles" to pass a line through the quartile-pairs, or "robust" for a robust-regression line. "none" suppresses the line }
+  \item{add.plot}{ if TRUE the new plot is added to an old one }
+  \item{xlim}{ the range for the x-axis}
+  \item{ylim}{ the range for the y-axis}
   \item{\dots}{ further arguments for the probability function}
 }
 \details{

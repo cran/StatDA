@@ -2,9 +2,10 @@
 function (x, distribution = "norm", ylab = deparse(substitute(x)), 
     xlab = paste(distribution, "quantiles"), main = "", las = par("las"), 
     datax=FALSE, envelope = 0.95, labels = FALSE, col = palette()[2], lwd = 2, 
-    pch = 1, line = c("quartiles", "robust", "none"), cex=1,xaxt="s", ...) 
+    pch = 1, line = c("quartiles", "robust", "none"), cex=1,xaxt="s",
+    add.plot=FALSE, xlim = NULL, ylim=NULL, ...) 
 {
-# Modified by PF, 21.09.2005
+# Modified by PF, 06.11.2009
 # original function: qq.plot from library(car)
 # Modification: additional argument "datax"
 # If datax=TRUE: x and y axes are exchanged
@@ -20,11 +21,24 @@ function (x, distribution = "norm", ylab = deparse(substitute(x)),
     n <- length(ord.x)
     P <- ppoints(n)
     z <- q.function(P, ...)
-    if (datax)
-      plot(ord.x, z, xlab = ylab, ylab = xlab, main = main, las = las, 
-        col = col, pch = pch, cex=cex,xaxt=xaxt)
-    else plot(z, ord.x, xlab = xlab, ylab = ylab, main = main, las = las, 
-        col = col, pch = pch, cex=cex,xaxt=xaxt)
+    if(!add.plot) {
+      if (datax)
+        plot(ord.x, z, xlab = ylab, ylab = xlab, main = main,
+        las = las, col = col, pch = pch, cex = cex, xaxt = xaxt,
+        ylim = ylim,xlim=xlim)
+      else plot(z, ord.x, xlab = xlab, ylab = ylab, main = main,
+          las = las, col = col, pch = pch, cex = cex, xaxt = xaxt, 
+          ylim = ylim,xlim=xlim)
+    }
+    else {
+      if (datax)
+        points(ord.x, z, xlab = ylab, ylab = xlab, main = main,
+        las = las, col = col, pch = pch, cex = cex, xaxt = xaxt)
+      else points(z, ord.x, xlab = xlab, ylab = ylab, main = main,
+        las = las, col = col, pch = pch, cex = cex, xaxt = xaxt)
+
+    }
+
     if (line == "quartiles") {
         Q.x <- quantile(ord.x, c(0.25, 0.75))
         Q.z <- q.function(c(0.25, 0.75), ...)
