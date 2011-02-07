@@ -22,7 +22,7 @@ mar = pmin(par("mar"), 1.1 + c(2 * axes + (xlab != ""), 2 * axes + (ylab != ""),
   \item{nrow, ncol}{ integers giving the numbers of rows and columns to use when location=NULL. By default, 'nrow==ncol', a square layout will be used. }
   \item{key.loc}{ vector with x and y coordinates of the unit key. }
   \item{key.labels}{ vector of character strings for labeling the segments of the unit key. If omitted, the second component of 'dimnames(x)' is used, if available. }
-  \item{key.xpd}{ clipping switch for the unit key (drawing and labelin), see 'par("xpd")' }
+  \item{key.xpd}{ clipping switch for the unit key (drawing and labeling), see 'par("xpd")' }
   \item{xlim}{ vector with the range of x coordinates to plot }
   \item{ylim}{ vector with the range of y coordinates to plot }
   \item{flip.labels}{ logical indication if the label locations should flip up and down from diagram to diagram. Defaults to a somewhat smart heuristic. }

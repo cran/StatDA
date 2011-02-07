@@ -21,15 +21,15 @@ mar = pmin(par("mar"), 1.1 + c(2 * axes + (xlab != ""), 2 * axes + (ylab != ""),
   \item{labels}{ vector of character strings for labeling the plots }
   \item{locations}{ locations for the boxes on the plot (e.g. X/Y coordinates) }
   \item{nrow}{ integers giving the number of rows ands columns to use when 'locations' is 'NULL'. By default, 'nrow == ncol', a square will be used. }
-  \item{ncol}{ integers giving the number of rows ands columns to use when 'locations' is 'NULL'. By default, 'nrow == ncol', a square will be used. }
+  \item{ncol}{ integers giving the number of rows and columns to use when 'locations' is 'NULL'. By default, 'nrow == ncol', a square will be used. }
   \item{key.loc}{ vector with x and y coordinates of the unit key. }
   \item{key.labels}{ vector of character strings for labeling the segments of the unit key. If omitted, the second component of 'dimnames(x)' ist used, if available. }
   \item{key.xpd}{ clipping switch for the unit key (drawing and labeling), see 'par("xpd")'. }
   \item{xlim}{ vector with the range of x coordinates to plot }
   \item{ylim}{ vector with the range of y coordinates to plot }
   \item{flip.labels}{ logical indicating if the label locations should flip up and down from diagram to diagram. Defaults to a somewhat smart heuristic. }
-  \item{len}{ multiplicative calues for the space of the labels on the legend }
-  \item{leglen}{ multiplicative calues for the space of the labels on the legend }
+  \item{len}{ multiplicative values for the space used in the plot window }
+  \item{leglen}{ multiplicative values for the space of the labels on the legend }
   \item{axes}{ logical flag: if 'TRUE' axes are added to the plot }
   \item{frame.plot}{ logical flag: if 'TRUE', the plot region ist framed }
   \item{main}{ a main title for the plot }

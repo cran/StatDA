@@ -64,7 +64,7 @@ else {
   lqperc=5
   selquan=c(0,25,50,75,100)
 }
-im.br=quantile(exp(z),selquan/100)
+im.br=quantile(10^z,selquan/100)
 
 # drawing legend
 lqsel=length(qutiles)
