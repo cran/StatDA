@@ -38,11 +38,11 @@ k5.c <- krige.control(obj.model=vario,lambda=0)
 
 # do kriging:
 if (!is.null(borders)){
-  k6.chor <- krige.conv(coords=cbind(X,Y),data=z,location=loc5,krige=k5.c,borders=get(eval(borders)))
+  k6.chor <- krige.conv(coords=cbind(X,Y),data=z,locations=loc5,krige=k5.c,borders=get(eval(borders)))
   attributes(k6.chor)$borders <- as.symbol(borders)
 }
 else {
-  k6.chor <- krige.conv(coords=cbind(X,Y),data=z,location=loc5,krige=k5.c)
+  k6.chor <- krige.conv(coords=cbind(X,Y),data=z,locations=loc5,krige=k5.c)
 }
 
 if (type=="contin") qutiles <- seq(from=0,to=1,by=0.01)

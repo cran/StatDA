@@ -31,7 +31,7 @@ function (coord, data, quan = 1/2, alpha = 0.025, symb = FALSE,
         if (plotmap == TRUE){ 
             plot(coord, type="n", ...)
             plotbg(map = map, which.map = which.map, map.col = map.col, 
-                map.lwd = map.lwd, add = TRUE)
+                map.lwd = map.lwd, add.plot = TRUE)
             points(coord[o,], pch=pch2[1],cex=cex2[1],col=col2[1])
             points(coord[!o,], pch=pch2[2],cex=cex2[2],col=col2[2])
 	}
@@ -56,7 +56,7 @@ function (coord, data, quan = 1/2, alpha = 0.025, symb = FALSE,
             if (j == 1) {
                 plot(coord, type = "n", ...)
         	    plotbg(map = map, which.map = which.map, map.col = map.col, 
-             		   map.lwd = map.lwd, add = TRUE)
+             		   map.lwd = map.lwd, add.plot = TRUE)
               	    points(coord[rd >= alpha[j], ], pch = lpch[j], 
                  	   cex = lcex[j], col = rbcol[rd >= alpha[j]])
             }

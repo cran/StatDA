@@ -7,8 +7,8 @@ varioCalc <- function(X,Y,el,max.dist=300,title="",km=TRUE,plot=TRUE)
 # binned variogram
 vario.b <- variog(coords=cbind(X,Y),lambda=0, data=el,max.dist=max.dist)
 # computing a directional variogram
-vario.0 <- variog(coords=cbind(X,Y),data=el,lambda=0,max.dist=max.dist, dir=0,tol=pi/8)
-vario.90 <- variog(coords=cbind(X,Y),data=el,lambda=0,max.dist=max.dist, dir=pi/2,tol=pi/8)
+vario.0 <- variog(coords=cbind(X,Y),data=el,lambda=0,max.dist=max.dist, direction=0,tolerance=pi/8)
+vario.90 <- variog(coords=cbind(X,Y),data=el,lambda=0,max.dist=max.dist, direction=pi/2,tolerance=pi/8)
 ymax=max(vario.b$v,vario.0$v,vario.90$v)
 if (plot){
 plot(0,0,xlab="Distance [km]",ylab="Semivariogram",xlim=c(0,max.dist),

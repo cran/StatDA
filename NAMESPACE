@@ -1,0 +1,22 @@
+# Export all names
+exportPattern(".")
+
+# Import all packages listed as Imports or Depends
+import(
+  akima,
+  car,
+  cluster,
+  e1071,
+  class,
+  geoR,
+  sp,
+  leaps,
+  MASS,
+  pixmap,
+  robustbase,
+  rgl,
+  rgr,
+  sgeostat,
+  mgcv,
+  methods
+)

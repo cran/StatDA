@@ -26,7 +26,7 @@ function (x, y, z, xlab = deparse(substitute(x)), ylab = deparse(substitute(y)),
     zlab
     rgl.clear()
     rgl.viewpoint(fov = fov)
-    rgl.bg(col = bg.col, fogtype = fogtype)
+    rgl.bg(color = bg.col, fogtype = fogtype)
     valid <- if (is.null(groups)) 
         complete.cases(x, y, z)
     else complete.cases(x, y, z, groups)

@@ -44,8 +44,8 @@ function (x, ..., quant = c(0.02,0.98), width = NULL, varwidth = FALSE,
     }
     for (i in 1:n) groups[i] <- list(boxplotperc.stats(groups[[i]], 
         quant))
-    stats <- matrix(0, nr = 5, nc = n)
-    conf <- matrix(0, nr = 2, nc = n)
+    stats <- matrix(0, nrow = 5, ncol = n)
+    conf <- matrix(0, nrow = 2, ncol = n)
     ng <- out <- group <- numeric(0)
     ct <- 1
     for (i in groups) {

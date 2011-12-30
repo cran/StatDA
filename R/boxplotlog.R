@@ -47,8 +47,8 @@ else {
         names <- attr(groups.l, "names")
     }
     for (i in 1:n) groups.l[i] <- list(boxplot.stats(groups.l[[i]], range))
-    stats.l <- matrix(0, nr = 5, nc = n)
-    conf.l <- matrix(0, nr = 2, nc = n)
+    stats.l <- matrix(0, nrow = 5, ncol = n)
+    conf.l <- matrix(0, nrow = 2, ncol = n)
     ng.l <- out.l <- group.l <- numeric(0)
     ct.l <- 1
     for (i in groups.l) {
@@ -62,10 +62,10 @@ else {
         ct.l <- ct.l + 1
     }
     for (i in 1:n) groups[i] <- list(boxplot.stats(groups[[i]], range))
-    stats <- matrix(0, nr = 5, nc = n)
-    conf <- matrix(0, nr = 2, nc = n)
-    stats <- matrix(0, nr = 5, nc = n)
-    conf <- matrix(0, nr = 2, nc = n)
+    stats <- matrix(0, nrow = 5, ncol = n)
+    conf <- matrix(0, nrow = 2, ncol = n)
+    stats <- matrix(0, nrow = 5, ncol = n)
+    conf <- matrix(0, nrow = 2, ncol = n)
     ng <- out <- group <- numeric(0)
     ct <- 1
     for (i in groups) {

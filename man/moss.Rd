@@ -7,7 +7,7 @@
 The Kola Data were collected in the Kola Project (1993-1998,
 Geological Surveys of Finland (GTK) and Norway (NGU) and Central
 Kola Expedition (CKE), Russia). More than 600 samples in five
-different layers were analysed, this dataset contains the C-horizon.
+different layers were analysed, this dataset contains the moss layer.
 }
 \usage{data(moss)}
 \format{
