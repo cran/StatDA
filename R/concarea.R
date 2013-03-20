@@ -39,15 +39,20 @@ if(logx) {
 	u[, 3] <- log10(u[, 3])
 	zlgnd <- paste("Log10\n", deparse(substitute(z)))
 }
-new <- interp.new(u[, 1], u[, 2], u[, 3], xo, yo, duplicate="median",extrap=TRUE)
+#new <- interp.new(u[, 1], u[, 2], u[, 3], xo, yo, duplicate="median",extrap=TRUE)
+new <- mba.surf(cbind(u[, 1], u[, 2], u[, 3]), no.X=length(xo), no.Y=length(yo),
+       n=1,m=1,extend=TRUE)
 
 if (is.null(borders)){
-  znew <- as.vector(new$z)
+  #znew <- as.vector(new$z)
+  znew <- as.vector(new$xyz.est$z)
 }
 else {
   bord <- get(eval(borders))
-  in.poly=polygrid(new$x,new$y,borders=cbind(bord$x,bord$y),vec.inout=TRUE)
-  whichdraw=matrix(as.vector(new$z)*in.poly$vec.inout, nrow=length(xo))
+  #in.poly=polygrid(new$x,new$y,borders=cbind(bord$x,bord$y),vec.inout=TRUE)
+  in.poly=polygrid(new$xyz.est$x,new$xyz.est$y,borders=cbind(bord$x,bord$y),vec.inout=TRUE)
+  #whichdraw=matrix(as.vector(new$z)*in.poly$vec.inout, nrow=length(xo))
+  whichdraw=matrix(as.vector(new$xyz.est$z)*in.poly$vec.inout, nrow=length(xo))
   znew <- whichdraw[in.poly$vec.inout==TRUE]
 }
 

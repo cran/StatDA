@@ -31,16 +31,21 @@ function(X,Y,z,resol=200,type="percentile",whichcol="gray",
 # tit.xshift ... x-shift of title in legend relative to leg.xpos.max
 
 # load symbol sets and sizes:
-z.spl <- interp.new(X,Y,z, xo=seq(min(X),max(X), length=resol),
-         yo=seq(min(Y),max(Y), length=resol), duplicate="median",extrap=TRUE)
+#z.spl <- interp.new(X,Y,z, xo=seq(min(X),max(X), length=resol),
+#         yo=seq(min(Y),max(Y), length=resol), duplicate="median",extrap=TRUE)
+f <- diff(range(Y))/diff(range(X))
+z.spl <- mba.surf(cbind(X,Y,z),no.X=resol,no.Y=resol,n=1,m=f,extend=TRUE)
 if (is.null(borders)){
-  whichdraw <- matrix(as.vector(z.spl$z), ncol=resol)
+  #whichdraw <- matrix(as.vector(z.spl$z), ncol=resol)
+  whichdraw <- matrix(as.vector(z.spl$xyz.est$z), ncol=resol)
 }
 else {
   bord <- get(eval(borders))
-  in.poly=polygrid(z.spl$x,z.spl$y,borders=cbind(bord$x,bord$y),vec.inout=TRUE)
+  #in.poly=polygrid(z.spl$x,z.spl$y,borders=cbind(bord$x,bord$y),vec.inout=TRUE)
+  in.poly=polygrid(z.spl$xyz.est$x,z.spl$xyz.est$y,borders=cbind(bord$x,bord$y),vec.inout=TRUE)
   in.poly$vec.inout[!in.poly$vec.inout] <- NA
-  whichdraw=matrix(as.vector(z.spl$z)*in.poly$vec.inout, ncol=resol)
+  #whichdraw=matrix(as.vector(z.spl$z)*in.poly$vec.inout, ncol=resol)
+  whichdraw=matrix(as.vector(z.spl$xyz.est$z)*in.poly$vec.inout, ncol=resol)
 }
 if (type=="contin") qutiles=seq(from=0,to=1,by=0.01)
 
@@ -53,7 +58,8 @@ else if (whichcol=="terrain") im.col=terrain.colors(length(im.br)-1)
 else if (whichcol=="topo") im.col=topo.colors(length(im.br)-1)
 else stop("Your color scheme is not defined here!")
 
-image(z.spl$x,z.spl$y,whichdraw,breaks=im.br,col=im.col,add=TRUE)
+#image(z.spl$x,z.spl$y,whichdraw,breaks=im.br,col=im.col,add=TRUE)
+image(z.spl$xyz.est$x,z.spl$xyz.est$y,whichdraw,breaks=im.br,col=im.col,add=TRUE)
 
 
 if (type=="percentile"){

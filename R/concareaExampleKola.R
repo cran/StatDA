@@ -38,15 +38,21 @@ if(logx) {
 	u[, 3] <- log10(u[, 3])
 	zlgnd <- paste("Log10\n", deparse(substitute(z)))
 }
-new <- interp.new(u[, 1], u[, 2], u[, 3], xo, yo, duplicate="median",extrap=TRUE)
+#new <- interp.new(u[, 1], u[, 2], u[, 3], xo, yo, duplicate="median",extrap=TRUE)
+new <- mba.surf(cbind(u[, 1], u[, 2], u[, 3]), no.X=length(xo), no.Y=length(yo),
+       n=1,m=1,extend=TRUE)
+
 
 if (is.null(borders)){
-  whichdraw <- matrix(as.vector(new$z), nrow=length(xo))
+  #whichdraw <- matrix(as.vector(new$z), nrow=length(xo))
+  whichdraw <- matrix(as.vector(new$xyz.est$z), nrow=length(xo))
 }
 else {
   bord <- get(eval(borders))
-  in.poly=polygrid(new$x,new$y,borders=cbind(bord$x,bord$y),vec.inout=TRUE)
-  whichdraw=matrix(as.vector(new$z)*in.poly$vec.inout, nrow=length(xo))
+  #in.poly=polygrid(new$x,new$y,borders=cbind(bord$x,bord$y),vec.inout=TRUE)
+  #whichdraw=matrix(as.vector(new$z)*in.poly$vec.inout, nrow=length(xo))
+  in.poly=polygrid(new$xyz.est$x,new$xyz.est$y,borders=cbind(bord$x,bord$y),vec.inout=TRUE)
+  whichdraw=matrix(as.vector(new$xyz.est$z)*in.poly$vec.inout, nrow=length(xo))
 }
 
 	znew <- whichdraw[in.poly$vec.inout==TRUE]
@@ -73,7 +79,8 @@ im.col=gray(seq(from=0.1,to=0.9,length=length(im.br)-1))
 
 par(mar=c(1.5,1.5,1.5,1.5))
 plot(u[,1],u[,2],frame.plot=FALSE,xaxt="n",yaxt="n",xlab="",ylab="",type="n")
-image(new$x,new$y,whichdraw,breaks=im.br,col=im.col, add = TRUE,cex.lab=1.2)
+#image(new$x,new$y,whichdraw,breaks=im.br,col=im.col, add = TRUE,cex.lab=1.2)
+image(new$xyz.est$x,new$xyz.est$y,whichdraw,breaks=im.br,col=im.col, add = TRUE,cex.lab=1.2)
 plotbg(map.col=c("gray","gray","gray","gray"),map.lwd=c(1,1,1,1),add.plot=TRUE)
 
 leg.ypos=seq(from=77.7e5,to=78.8e5,length=100)
