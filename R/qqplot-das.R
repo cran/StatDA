@@ -53,8 +53,8 @@ function (x, distribution = "norm", ylab = deparse(substitute(x)),
         abline(a, b, col = col, lwd = lwd)
     }
     if (line == "robust") {
-        if (!require("MASS")) 
-            stop("MASS package not available")
+        #if (!require("MASS")) 
+        #    stop("MASS package not available")
         if (datax)
           coef <- coefficients(rlm(z ~ ord.x))
         else coef <- coefficients(rlm(ord.x ~ z))

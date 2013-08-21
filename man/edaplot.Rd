@@ -10,10 +10,10 @@ edaplot(data,scatter=TRUE,box=TRUE, P.plot=TRUE, D.plot=TRUE,
          P.sub=NULL, P.xlab=deparse(substitute(data)), P.ylab=default, P.ann=par("ann"),
          P.axes=TRUE, P.frame.plot=P.axes, P.log=FALSE, P.logfine=c(2,5,10), P.xlim=NULL,
          P.cex.lab=1.4,B.range=1.5, B.notch=FALSE, B.outline=TRUE,
-         B.border=par("fg"), B.col=NULL, B.pch=par("pch"), B.cex=1, B.bg=NA, H.breaks="Sturges",
-         H.freq=TRUE, H.include.lowest=TRUE, H.right=TRUE, H.density=NULL, H.angle=45,
-         H.col=NULL, H.border=NULL, H.labels=FALSE, S.pch=".", S.col=par("col"), S.bg=NA, S.cex=1,
-         D.lwd=1,D.lty=1)
+         B.border=par("fg"), B.col=NULL, B.pch=par("pch"), B.cex=1, B.bg=NA, 
+         H.breaks="Sturges", H.freq=TRUE, H.include.lowest=TRUE, H.right=TRUE, 
+         H.density=NULL, H.angle=45, H.col=NULL, H.border=NULL, H.labels=FALSE, 
+         S.pch=".", S.col=par("col"), S.bg=NA, S.cex=1, D.lwd=1,D.lty=1)
 }
 \arguments{
   \item{data}{ data set }

@@ -176,8 +176,7 @@ out<-sumstats(moss[,20:58])
 
 \begin{small}
 <<label=tab1,echo=FALSE,results=tex,width=9,height=9>>=
-library(xtable)
-xtable(out,caption="Summary statistics for selected elements of the Kola moss data.", label="tab1")
+xtable::xtable(out,caption="Summary statistics for selected elements of the Kola moss data.", label="tab1")
 
 
 @
@@ -316,7 +315,7 @@ vario.90 <- variog(coords=cbind(X,Y), data=el, lambda=0, max.dist=300, dir=pi/4,
 vario.45 <- variog(coords=cbind(X,Y), data=el, lambda=0, max.dist=300, dir=pi/8, tol=pi/8)
 vario.120 <- variog(coords=cbind(X,Y), data=el, lambda=0, max.dist=300, dir=3*pi/8, tol=pi/8)
 data(res.eyefit.As_C)
-v5=variofit(vario.b,res.eyefit.As_C,cov.model="spherical",max.dist=300)
+v5 <- variofit(vario.b,res.eyefit.As_C,cov.model="spherical",max.dist=300)
 @
 
 <<label=fig5plot,include=FALSE, echo=FALSE,results=hide>>=
@@ -373,7 +372,7 @@ el=chorizon[,"As"]
 vario.b <- variog(coords=cbind(X,Y), data=el, lambda=0, max.dist=300000)
 data(res.eyefit.As_C_m)
 data(bordersKola)
-v5=variofit(vario.b,res.eyefit.As_C_m,cov.model="spherical",max.dist=300000)
+v5 <- variofit(vario.b,res.eyefit.As_C_m,cov.model="spherical",max.dist=300000)
 plot(X,Y,frame.plot=FALSE,xaxt="n",yaxt="n",xlab="",ylab="",type="n")
 KrigeLegend(X,Y,el,resol=25,vario=v5,type="percentile",whichcol="gray",
     qutiles=c(0,0.05,0.25,0.50,0.75,0.90,0.95,1),borders="bordersKola",
@@ -436,7 +435,6 @@ Another possibility is to examine the concentration in one direction from the re
 In Figure~\ref{fig:eight} the reference point (Nikel/Zapojarnij) is in the north-west and the subarea goes to Monchegorsk in the south-east. In the plot on the right-hand side it is visible that near Nikel-Zapojarnij and Monchegorsk the concentration of Cu is higher than between the two places. The width of the peak says that the emissions from Monchegorsk have a larger spread.
 
 <<label=fig8plot, include=FALSE, echo=FALSE>>=
-library(sgeostat)
 X=moss[,"XCOO"]
 Y=moss[,"YCOO"]
 Cu=moss[,"Cu"]
@@ -594,7 +592,7 @@ A more robust estimation of the correlation is the Minimum Covariance Determinan
 <<label=fig13plot,include=FALSE, echo=FALSE>>=
 x=chorizon[,c("Ca","Cu","Mg","Na","P","Sr","Zn")]
 par(mfrow=c(1,1),mar=c(4,4,2,0))
-R=covMcd(log10(x),cor=T)$cor
+R=robustbase::covMcd(log10(x),cor=T)$cor
 P=cor(log10(x))
 CorCompare(R,P,labels1=dimnames(x)[[2]],labels2=dimnames(x)[[2]],
 method1="Robust",method2="Pearson",ndigits=2, cex.label=1.2)
@@ -743,7 +741,7 @@ return(x.back)
 }
 x2=ilr(x)
 res2=princomp(x2,cor=TRUE)
-x2.mcd=covMcd(x2,cor=T)
+x2.mcd=robustbase::covMcd(x2,cor=T)
 res2rob=princomp(x2,covmat=x2.mcd,cor=T)
 V=matrix(0,nrow=31,ncol=30)
 for (i in 1:ncol(V)){
@@ -801,7 +799,7 @@ The last techniques are the fuzzy methods. In this case the observations are not
 el=c("Cu","Ni","Mg","Sr")
 x=scale(log10(moss[,el]))
 set.seed(100)
-res=cmeans(x,4)
+res=e1071::cmeans(x,4)
 X=moss[,"XCOO"]
 Y=moss[,"YCOO"]
 xwid=diff(range(X))/12e4
@@ -861,11 +859,11 @@ X=chorizon[,"XCOO"]
 Y=chorizon[,"YCOO"]
 xdat=log10(chorizon[,101:109]/chorizon[,110])
 set.seed(101)
-xdat.mcd=covMcd(xdat,cor=T)
+xdat.mcd=robustbase::covMcd(xdat,cor=T)
 md=sqrt(xdat.mcd$mah)
 crit=sqrt(qchisq(0.975,ncol(xdat)))
 set.seed(104)
-res=ltsReg(log10(Be) ~ Al_XRF+Ca_XRF+Fe_XRF+K_XRF+Mg_XRF+Mn_XRF+Na_XRF+P_XRF+Si_XRF,
+res=robustbase::ltsReg(log10(Be) ~ Al_XRF+Ca_XRF+Fe_XRF+K_XRF+Mg_XRF+Mn_XRF+Na_XRF+P_XRF+Si_XRF,
    data=xdat)
 resid=res$residuals/res$scale
 xwid=diff(range(X))/12e4

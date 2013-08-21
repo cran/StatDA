@@ -5,7 +5,11 @@
   A QQ (Quantile-Quantile) plot is produced.
 }
 \usage{
-qqplot.das(x, distribution = "norm", ylab = deparse(substitute(x)), xlab = paste(distribution, "quantiles"), main = "", las = par("las"), datax = FALSE, envelope = 0.95, labels = FALSE, col = palette()[2], lwd = 2, pch = 1, line = c("quartiles", "robust", "none"), cex = 1, xaxt = "s", add.plot=FALSE,xlim=NULL,ylim=NULL,...)
+qqplot.das(x, distribution = "norm", ylab = deparse(substitute(x)), 
+     xlab = paste(distribution, "quantiles"), main = "", las = par("las"), 
+     datax = FALSE, envelope = 0.95, labels = FALSE, col = palette()[2], 
+     lwd = 2, pch = 1, line = c("quartiles", "robust", "none"), cex = 1, 
+     xaxt = "s", add.plot=FALSE,xlim=NULL,ylim=NULL,...)
 }
 \arguments{
   \item{x}{ numeric vector }

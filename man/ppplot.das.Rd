@@ -5,7 +5,8 @@
   This function computes a PP (Probability-Probability) plot for the given dataset.
 }
 \usage{
-ppplot.das(x, pdist = pnorm, xlab = NULL, ylab = "Probability", line = TRUE, lwd = 2, pch = 3, cex = 0.7, cex.lab = 1, ...)
+ppplot.das(x, pdist = pnorm, xlab = NULL, ylab = "Probability", line = TRUE, 
+        lwd = 2, pch = 3, cex = 0.7, cex.lab = 1, ...)
 }
 \arguments{
   \item{x}{ dataset }
@@ -23,6 +24,7 @@ The empirical probability is calculated and compared with the comparison distrib
 \url{http://www.statistik.tuwien.ac.at/public/filz/}}
 \examples{
 data(AuNEW)
-ppplot.das(AuNEW,pdist=plnorm,xlab="Probability of Au",ylab="Probabilities of lognormal distribution", pch=3,cex=0.7)
+ppplot.das(AuNEW,pdist=plnorm,xlab="Probability of Au",
+     ylab="Probabilities of lognormal distribution", pch=3,cex=0.7)
 }
 \keyword{ dplot}

@@ -3,18 +3,29 @@ exportPattern(".")
 
 # Import all packages listed as Imports or Depends
 import(
-  car,
-  cluster,
-  e1071,
-  class,
   geoR,
-  sp,
-  leaps,
-  MASS,
-  pixmap,
-  robustbase,
-  rgl,
-  sgeostat,
-  mgcv,
-  methods
+  methods,
+  sgeostat
 )
+
+importFrom(cluster,pam)
+importFrom(e1071,cmeans)
+#importFrom(geoR,polygrid)
+#importFrom(geoR,variofit)
+#importFrom(geoR,variog)
+#importFrom(geoR,lines.variogram)
+#importFrom(geoR,lines.variomodel.variofit)
+importFrom(MASS,rlm)
+importFrom(MBA,mba.surf)
+importFrom(mgcv,gam)
+importFrom(mgcv,s)
+importFrom(rgl,rgl.clear)
+importFrom(rgl,rgl.viewpoint)
+importFrom(rgl,rgl.bg)
+importFrom(rgl,rgl.spheres)
+importFrom(rgl,rgl.points)
+importFrom(rgl,rgl.lines)
+importFrom(rgl,rgl.texts)
+importFrom(rgl,rgl.surface)
+importFrom(robustbase,covMcd)
+importFrom(xtable,xtable)
