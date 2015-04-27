@@ -46,8 +46,10 @@ if (type=="percentile"){
   for (i in 1:(length(qutiles)-1)){
     points(X[z>=q[i] & z<q[i+1]], Y[z>=q[i] & z<q[i+1]], pch=symb[i], cex=ssize[i])
   }
-  points(X[z>=q[length(qutiles)]],Y[z>=q[length(qutiles)]],pch=symb[length(qutiles)],
-              cex=ssize[length(qutiles)])
+#  points(X[z>=q[length(qutiles)]],Y[z>=q[length(qutiles)]],pch=symb[length(qutiles)],
+#              cex=ssize[length(qutiles)])
+  points(X[z>=q[length(qutiles)]],Y[z>=q[length(qutiles)]],pch=symb[length(symb)],
+              cex=ssize[length(ssize)])
   #Legend
   leg=rep(NA,length(q)-1)
   leg[1]=paste("  ",roundpretty(q[1],leg.round),"-",format(roundpretty(q[1+1],leg.round),
