@@ -64,14 +64,14 @@ different layers were analysed, this dataset contains the C-horizon.
 Kola Project (1993-1998)
 }
 \references{
-Reimann C, Äyräs M, Chekushin V, Bogatyrev I, Boyd R, Caritat P de, Dutter R,
-Finne TE, Halleraker JH, Jæger Ø, Kashulina G, Lehto O, Niskavaara H, Pavlov V,
-Räisänen ML, Strand T, Volden T. Environmental Geochemical Atlas of the Central
+Reimann C, ?yr?s M, Chekushin V, Bogatyrev I, Boyd R, Caritat P de, Dutter R,
+Finne TE, Halleraker JH, J?ger ?, Kashulina G, Lehto O, Niskavaara H, Pavlov V,
+R?is?nen ML, Strand T, Volden T. Environmental Geochemical Atlas of the Central
 Barents Region. NGU-GTK-CKE Special Publication, Geological Survey of Norway,
 Trondheim, Norway, 1998.
 }
 \author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
-\url{http://www.statistik.tuwien.ac.at/public/filz/}}
+\url{http://cstat.tuwien.ac.at/filz/}}
 \examples{
 data(topsoil)
 str(topsoil)

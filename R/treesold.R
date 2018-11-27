@@ -13,7 +13,7 @@ setMethod("show", "branch",function(object){
     cat("Bole:  ",object@Bole," \n")
                # Ast oder Stamm
     cat("angle: ",object@w," \n") # Winkel
-    cat("heigh: ",object@h," \n") # Höhe
+    cat("heigh: ",object@h," \n") # Hoehe
     if((object@Bole==2)|(object@Bole==3))
         ("Tree is part of the Bole")
     if(class(object@LeafL)!="NULL") {
@@ -44,11 +44,11 @@ setMethod("show", "branch",function(object){
 })
 
 setMethod("plot", "branch",function(a,x,y,len=1,lh=1,leg=NULL,...){
-          # a Branch, x x-Koord, y y-Koord, len generelle Vergrößerung
-          # len Zoomfaktor, lh Multiplikator der Höhe
+          # a Branch, x x-Koord, y y-Koord, len generelle Vergroesserung
+          # len Zoomfaktor, lh Multiplikator der Hoehe
     points=matrix(0,nrow=4,ncol=2)
           # Matrix mit den Eckpunkten des Astes
-    if(a@LR==0) { # für linken Ast
+    if(a@LR==0) { # fuer linken Ast
         points[1,1]=x
         points[1,2]=y
         points[2,1]=points[1,1]-lh*len*a@h*sin(a@w*2*pi/360)
@@ -62,7 +62,7 @@ setMethod("plot", "branch",function(a,x,y,len=1,lh=1,leg=NULL,...){
         text(xy.coords(points[2,1],points[2,2]),colnames(leg)[a@El],cex=0.8,adj=c(0.3,-0.2))
     }
     }
-    if(a@LR==1) { # für rechten Ast
+    if(a@LR==1) { # fuer rechten Ast
         points[1,1]=x
         points[1,2]=y
         points[2,1]=points[1,1]+lh*len*a@h*sin(a@w*2*pi/360)
@@ -108,11 +108,11 @@ conv<-function(x,i=1){
 }
 
 setlr<-function(x) {
-    if(class(x@LeafL)=="branch") { # Überprüfung auf Klasse
+    if(class(x@LeafL)=="branch") { # Ueberpruefung auf Klasse
         if((x@Bole==0)|(x@Bole==1)){ # Bei links von Stamm
             if(length(x@LeafL@El)<length(x@LeafR@El)) {
                 y<-x@LeafL         # Wenn rechte Fortsetzung
-                x@LeafL<-x@LeafR   # größer als linke
+                x@LeafL<-x@LeafR   # groesser als linke
                 x@LeafR<-y         # Vertauschung
             }
             x@LeafL@Bole=0  # links vom Stamm zeigt links
@@ -121,7 +121,7 @@ setlr<-function(x) {
         if(x@Bole==2){             # Stamm zeigt nach links
             if(length(x@LeafL@El)>length(x@LeafR@El)) {
                 y<-x@LeafL         # Wenn linke Fortsetzung
-                x@LeafL<-x@LeafR   # größer als rechte
+                x@LeafL<-x@LeafR   # groesser als rechte
                 x@LeafR<-y         # Vertauschung
             }
             x@LeafL@Bole=0  # Links vom Stamm zeigt links
@@ -130,7 +130,7 @@ setlr<-function(x) {
         if(x@Bole==3){             # Stamm zeigt nach rechts
             if(length(x@LeafL@El)<length(x@LeafR@El)) {
                 y<-x@LeafL         # Wenn rechte Fortsetzung
-                x@LeafL<-x@LeafR   # größer als linke
+                x@LeafL<-x@LeafR   # groesser als linke
                 x@LeafR<-y         # Vertauschung
             }
             x@LeafL@Bole=2  # Fortsetzung Stamm, zeigt links
@@ -139,7 +139,7 @@ setlr<-function(x) {
         if((x@Bole==4)|(x@Bole==5)){ # Bei rechts von Stamm
             if(length(x@LeafL@El)>length(x@LeafR@El)) {
                 y<-x@LeafL         # Wenn linke Fortsetzung
-                x@LeafL<-x@LeafR   # größer als rechte
+                x@LeafL<-x@LeafR   # groesser als rechte
                 x@LeafR<-y         # Vertauschung
             }
             x@LeafL@Bole=4  # rechts vom Stamm zeigt links
@@ -155,7 +155,7 @@ setlr<-function(x) {
 }
 
 setw<-function(x,unm,wmax=0,wmin=0) {
-         # x Branch, unm Unähnlichkeitsmatrix
+         # x Branch, unm Unaehnlichkeitsmatrix
          # wmax Winkel des Cluster aus allen El
          # wmin Winkel des homogensten Cluster aus 2 El 
      if((class(x@LeafL)=="branch") & (class(x@LeafR)=="branch")) {
@@ -168,7 +168,7 @@ setw<-function(x,unm,wmax=0,wmin=0) {
               }
          # von den weiteren El zu den anderen
          }
-         gX<-max(gX) # max Heterogenität von El in cluster
+         gX<-max(gX) # max Heterogenitaet von El in cluster
          gA<-max(unm) # max aller Merkmale
          gmin<-min(unm[unm!=0]) # Min aller Merkmale
          w<-(wmin*(log(gA+1)-log(gX+1))+wmax*(log(gX+1)-log(gmin+1)))/(log(gA+1)-log(gmin+1))

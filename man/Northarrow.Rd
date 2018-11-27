@@ -23,7 +23,7 @@ Tcex)
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
    Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
 \author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
-\url{http://www.statistik.tuwien.ac.at/public/filz/}}
+\url{http://cstat.tuwien.ac.at/filz/}}
 \examples{
 plot.new()
 Northarrow(0.5,0,0.5,1,0.5,0.5,Alength=0.15,Aangle=15,Alwd=2,Tcex=2)

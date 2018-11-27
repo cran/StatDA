@@ -115,7 +115,7 @@ function(x, xA=1,yA=2,zA=3,
     if(xA!=1 | yA!=2 | zA!=3) { 
         if(xA!=yA | yA!=zA | zA!=xA & (xA+yA+zA)==6) {
             bcl[bcl==1]=4   #Funktion zum tauschen
-            bcl[bcl==2]=5   #auf gewünschte Reihenfolge
+            bcl[bcl==2]=5   #auf gewuenschte Reihenfolge
             bcl[bcl==3]=6
             bcl[bcl==4]=xA
             bcl[bcl==5]=yA

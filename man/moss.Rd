@@ -25,7 +25,7 @@ different layers were analysed, this dataset contains the moss layer.
     \item{\code{TREELAY}}{a factor with levels \code{} \code{BIPI} \code{BIPISPR} \code{BIRCH} \code{BIRCHdense} \code{BISPR} \code{BISPRPI} \code{MIX} \code{PIBI} \code{PIBISPR} \code{PINE} \code{PISPR} \code{PISPRBI} \code{SHRUBS} \code{SPARCEBI} \code{SPARCEPI} \code{SPRBI} \code{SPRBIPI} \code{SPRPI} \code{SPRPIBI} \code{SPRUCE} \code{WILLOW}}
     \item{\code{VEG_ZONE}}{a factor with levels \code{} \code{BOREAL_FOREST} \code{DWARF_SHRUB_TUNDRA} \code{FOREST_TUNDRA} \code{SHRUB_TUNDRA} \code{TUNDRA}}
     \item{\code{Date}}{a numeric vector}
-    \item{\code{SAMP}}{a factor with levels \code{ALL} \code{ATMLRMA} \code{CRGKPCTF} \code{CRJHOJTV} \code{CRJHPC} \code{CRJHTF} \code{CROJTV} \code{CRPCTF} \code{CRPCTV} \code{CRTF} \code{DRMLRKK} \code{DRMRLKK} \code{GKJHOJ} \code{GKJHTV} \code{GKOJPCTV} \code{GKOJTF} \code{GKOJTV} \code{GKPCTF} \code{HARR} \code{JA} \code{JAMAMRL} \code{JAMLRMA} \code{JAMLRRR} \code{JARKP} \code{JARP} \code{JARPMA} \code{JARPMLR} \code{JARR} \code{JARRMLR} \code{JCPCTF} \code{JHGKTV} \code{JHOJGK} \code{JHOJTV} \code{JHPCTF} \code{JHRBTV} \code{Katanaev} \code{MAKKVG} \code{MARP} \code{MARPMLR} \code{MARPMRL} \code{MAVG} \code{MLR} \code{MLRJA} \code{MLRJARP} \code{MLRJARR} \code{MLRJSRR} \code{MLRMADR} \code{MLRMAJA} \code{MLRMARP} \code{MLRMAVG} \code{MLRMÖVG} \code{MLRRPJA} \code{MLRRPMA} \code{MRLMAJA} \code{OJGKTV} \code{OJTF} \code{Pavlov} \code{RPAV} \code{RPEM} \code{RPMA} \code{RPMLRJA} \code{RPMLRMA} \code{RPVM} \code{Semenov} \code{Smirnov} \code{TFOJ} \code{VGHNMA} \code{VGMA} \code{VGMAHN} \code{VGMARS} \code{VGMASR} \code{VGRSMA} \code{VMRP} \code{VMRPMA}}
+    \item{\code{SAMP}}{a factor with levels \code{ALL} \code{ATMLRMA} \code{CRGKPCTF} \code{CRJHOJTV} \code{CRJHPC} \code{CRJHTF} \code{CROJTV} \code{CRPCTF} \code{CRPCTV} \code{CRTF} \code{DRMLRKK} \code{DRMRLKK} \code{GKJHOJ} \code{GKJHTV} \code{GKOJPCTV} \code{GKOJTF} \code{GKOJTV} \code{GKPCTF} \code{HARR} \code{JA} \code{JAMAMRL} \code{JAMLRMA} \code{JAMLRRR} \code{JARKP} \code{JARP} \code{JARPMA} \code{JARPMLR} \code{JARR} \code{JARRMLR} \code{JCPCTF} \code{JHGKTV} \code{JHOJGK} \code{JHOJTV} \code{JHPCTF} \code{JHRBTV} \code{Katanaev} \code{MAKKVG} \code{MARP} \code{MARPMLR} \code{MARPMRL} \code{MAVG} \code{MLR} \code{MLRJA} \code{MLRJARP} \code{MLRJARR} \code{MLRJSRR} \code{MLRMADR} \code{MLRMAJA} \code{MLRMARP} \code{MLRMAVG} \code{MLRM?VG} \code{MLRRPJA} \code{MLRRPMA} \code{MRLMAJA} \code{OJGKTV} \code{OJTF} \code{Pavlov} \code{RPAV} \code{RPEM} \code{RPMA} \code{RPMLRJA} \code{RPMLRMA} \code{RPVM} \code{Semenov} \code{Smirnov} \code{TFOJ} \code{VGHNMA} \code{VGMA} \code{VGMAHN} \code{VGMARS} \code{VGMASR} \code{VGRSMA} \code{VMRP} \code{VMRPMA}}
     \item{\code{SPECIES}}{a factor with levels \code{} \code{HSDC} \code{HSDR} \code{HSRC} \code{HSSC} \code{HSSR} \code{PS} \code{PSDC} \code{PSDR} \code{PSRC} \code{PSRD} \code{PSSC} \code{PSSR} \code{SFDR}}
     \item{\code{LITO}}{a numeric vector}
     \item{\code{C_PAR}}{a factor with levels \code{} \code{BEDR} \code{FLUV} \code{FLUVG} \code{MAR} \code{SAP} \code{SEA} \code{STRAT} \code{TILL} \code{TILLSA} \code{TILLSAP} \code{TILL&SAP}}
@@ -77,14 +77,14 @@ different layers were analysed, this dataset contains the moss layer.
 Kola Project (1993-1998)
 }
 \references{
-Reimann C, Äyräs M, Chekushin V, Bogatyrev I, Boyd R, Caritat P de, Dutter R,
-Finne TE, Halleraker JH, Jæger Ø, Kashulina G, Lehto O, Niskavaara H, Pavlov V,
-Räisänen ML, Strand T, Volden T. Environmental Geochemical Atlas of the Central
+Reimann C, ?yr?s M, Chekushin V, Bogatyrev I, Boyd R, Caritat P de, Dutter R,
+Finne TE, Halleraker JH, J?ger ?, Kashulina G, Lehto O, Niskavaara H, Pavlov V,
+R?is?nen ML, Strand T, Volden T. Environmental Geochemical Atlas of the Central
 Barents Region. NGU-GTK-CKE Special Publication, Geological Survey of Norway,
 Trondheim, Norway, 1998.
 }
 \author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
-\url{http://www.statistik.tuwien.ac.at/public/filz/}}
+\url{http://cstat.tuwien.ac.at/filz/}}
 \examples{
 data(moss)
 str(moss)

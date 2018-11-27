@@ -203,7 +203,7 @@ Field duplicates have been selected for quality control.
     \item{\code{F2_Zn}}{a numeric vector}
     \item{\code{F2_Zn_INAA}}{a numeric vector}
     \item{\code{DATE}}{a numeric vector}
-    \item{\code{X.SAMP}}{a factor with levels \code{CRJHPC} \code{CRPCTF} \code{CRTF} \code{GKJHOJ} \code{GKJHTV} \code{JARR} \code{JHOJTV} \code{MÄVG} \code{MLRJARP} \code{MLRJSRR} \code{MLRMÄDR} \code{OJGKTV} \code{RPAV} \code{RPMLRJA} \code{RPVM} \code{Semenov} \code{Smirnov} \code{VGMÄ}}
+    \item{\code{X.SAMP}}{a factor with levels \code{CRJHPC} \code{CRPCTF} \code{CRTF} \code{GKJHOJ} \code{GKJHTV} \code{JARR} \code{JHOJTV} \code{M?VG} \code{MLRJARP} \code{MLRJSRR} \code{MLRM?DR} \code{OJGKTV} \code{RPAV} \code{RPMLRJA} \code{RPVM} \code{Semenov} \code{Smirnov} \code{VGM?}}
     \item{\code{ELEV}}{a numeric vector}
     \item{\code{UTM}}{a numeric vector}
     \item{\code{X.COUN}}{a factor with levels \code{FIN} \code{NOR} \code{RUS}}
@@ -256,14 +256,14 @@ Field duplicates have been selected for quality control.
 Kola Project (1993-1998)
 }
 \references{
-Reimann C, Äyräs M, Chekushin V, Bogatyrev I, Boyd R, Caritat P de, Dutter R,
-Finne TE, Halleraker JH, Jæger Ø, Kashulina G, Lehto O, Niskavaara H, Pavlov V,
-Räisänen ML, Strand T, Volden T. Environmental Geochemical Atlas of the Central
+Reimann C, ?yr?s M, Chekushin V, Bogatyrev I, Boyd R, Caritat P de, Dutter R,
+Finne TE, Halleraker JH, J?ger ?, Kashulina G, Lehto O, Niskavaara H, Pavlov V,
+R?is?nen ML, Strand T, Volden T. Environmental Geochemical Atlas of the Central
 Barents Region. NGU-GTK-CKE Special Publication, Geological Survey of Norway,
 Trondheim, Norway, 1998.
 }
 \author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
-\url{http://www.statistik.tuwien.ac.at/public/filz/}}
+\url{http://cstat.tuwien.ac.at/filz/}}
 \examples{
 data(CHorFieldDUP)
 str(CHorFieldDUP)
