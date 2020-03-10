@@ -3,13 +3,20 @@ exportPattern(".")
 
 # Import all packages listed as Imports or Depends
 import(
-  geoR,
   methods,
   sgeostat
 )
 
 S3method(print,corsign)
 
+importFrom(geoR,krige.control)
+importFrom(geoR,krige.conv)
+importFrom(sp,SpatialPolygons)
+importFrom(sp,SpatialPoints)
+importFrom(sp,Polygons)
+importFrom(sp,Polygon)
+
+importFrom("graphics", "plot")
 importFrom(graphics,plot.new)
 importFrom(graphics,par)
 importFrom(graphics,plot.window)
