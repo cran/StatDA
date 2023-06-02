@@ -30,6 +30,9 @@ cex.scale = 0.8, xf = 9000, logscale = TRUE, accentuate = FALSE)
   \item{logscale}{ if TRUE a log scale is used (for boxplot scale) and the log-boxplot is computed }
   \item{accentuate}{ if TRUE, accentuated symbols are used (here only EDA accentuated!) }
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
 It is possible to choose between different methods for calculating the range of the values for the different symbols.
 

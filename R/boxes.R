@@ -173,7 +173,8 @@ function(x, xA=1,yA=2,zA=3,
   
 
     if (!is.null(key.loc)) {
-        par(xpd = key.xpd)
+        oldpar <- par(xpd = key.xpd)
+        on.exit(par(oldpar))
 
         q[1,]=1
         xleg=key.loc[1]

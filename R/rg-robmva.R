@@ -31,8 +31,8 @@ function(x, proc = "mcd", wts = NULL, main = deparse(substitute(x)))
 	n <- length(x[, 1])
 	p <- length(x[1,  ])
 	matnames <- dimnames(x)
-	if(n <= 3 * p)
-		cat("*** Proceed With Great Care, n < 3p ***\n")
+	#if(n <= 3 * p)
+	#	cat("*** Proceed With Great Care, n < 3p ***\n")
 	if(is.null(wts)) {
 		#Use mve or mcd procedure to identify core background subset
 		if(p > 50) proc <- "mve"
@@ -51,11 +51,11 @@ function(x, proc = "mcd", wts = NULL, main = deparse(substitute(x)))
 		save <- cov.wt(x, wt = wts, cor = TRUE)
 	}
 	nc <- sum(wts)
-	cat("  n = ", n, "\tnc = ", nc, "\tp = ", p, "\t\tnc/p = ", round(nc/p, 2), "\n")
-        if(nc <= 5 * p)
-                cat("*** Proceed with Care, nc is < 5p ***\n")
-        if(nc <= 3 * p)
-                cat("*** Proceed With Great Care, nc = ", nc, ", which is < 3p ***\n")
+	#cat("  n = ", n, "\tnc = ", nc, "\tp = ", p, "\t\tnc/p = ", round(nc/p, 2), "\n")
+        #if(nc <= 5 * p)
+        #        cat("*** Proceed with Care, nc is < 5p ***\n")
+        #if(nc <= 3 * p)
+        #        cat("*** Proceed With Great Care, nc = ", nc, ", which is < 3p ***\n")
 
 	#Standardize whole data set with robust background estimators
 	temp <- sweep(x, 2, save$center, "-")
@@ -88,7 +88,7 @@ function(x, proc = "mcd", wts = NULL, main = deparse(substitute(x)))
 		epm <- 1 - pchisq(md, p)
 	}
 	else {
-		cat("  Lowest eigenvalue > 10^-4, Mahalanobis distances not computed\n")
+		#cat("  Lowest eigenvalue > 10^-4, Mahalanobis distances not computed\n")
 		md <- NULL
 		ppm <- NULL
 		epm <- NULL

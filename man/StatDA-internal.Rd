@@ -1,5 +1,7 @@
 \name{StatDA-internal}
 \title{Internal StatDA objects}
+\alias{.check.borders}
+\alias{.geoR_inout}
 \alias{arbit.size}
 \alias{arbit.symbol}
 \alias{boxplotperc.stats}
@@ -21,6 +23,9 @@
 \alias{seth}
 \alias{setlr}
 \alias{setw}
+\value{
+  No return value, internal function.
+}
 \description{Internal StatDA objects.}
 \details{These are not to be called by the user.
 }

@@ -10,6 +10,9 @@ plotelement(da.object)
 \arguments{
   \item{da.object}{ a object of the lda class}
 }
+\value{
+  No return value, creates a plot.
+}
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
    Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
 \author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
@@ -23,4 +26,3 @@ z <- MASS::lda(Sp ~ ., Iris, prior = c(1,1,1)/3, subset = train)
 plotelement(z)
 }
 \keyword{ dplot}
-\keyword{ tree }

@@ -18,7 +18,8 @@ dat <- x/s
 xp <- dat[,2] + dat[,3]/2
 yp <- dat[,3] * sqrt(3)/2
 
-par(pty="s")
+oldpar <- par(pty="s")
+on.exit(par(oldpar))
 plot(xp,yp,xlim=c(0,1),ylim=c(0,0.9), 
    frame.plot=FALSE, xaxt="n", yaxt="n", xlab="", ylab="", ...)
 

@@ -34,6 +34,9 @@ add = FALSE, plot = TRUE, ...)
   \item{plot}{ nothing is plotted }
   \item{\dots}{ graphical parameters for plotting the box}
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
 Each sun represents one row of the input x. Each line of the sun represents one choosen element. The distance from the center of the sun to the point shows the size of the value of the (scaled) column.
 }

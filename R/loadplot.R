@@ -51,7 +51,8 @@ tplace=-0.5 # where to place text labels
 		}
 	}
 #axis(2,at=a<-c(-1,-0.5,0,0.5,1),labels=a)
-par(las=1)
+oldpar <- par(las=1)
+on.exit(par(oldpar))
 	mtext("-1",side=2,at=-1,line=tplace)
 	mtext("-0.5",side=2,at=-0.5,line=tplace)
 	mtext("0",side=2,at=0,line=tplace)

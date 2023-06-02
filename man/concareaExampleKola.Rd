@@ -43,7 +43,7 @@ y.logfinetick = c(2, 5, 10))
    Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
 \author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
 \url{http://cstat.tuwien.ac.at/filz/}}
-\seealso{ \code{\link{qpplot.das}}, \code{\link{concarea}}, \code{\link[rgr]{caplot}} }
+\seealso{ \code{\link{qpplot.das}}, \code{\link{concarea}} }
 \examples{
 data(ohorizon)
 data(kola.background)
@@ -54,9 +54,9 @@ X=ohorizon[,"XCOO"]
 Y=ohorizon[,"YCOO"]
 
 
-par(mfrow=c(2,2),mar=c(1.5,1.5,1.5,1.5))
+op <- par(mfrow=c(2,2),mar=c(1.5,1.5,1.5,1.5))
 concareaExampleKola(X,Y,Cu,log=TRUE,zname="Cu in O-horizon [mg/kg]",
    x.logfinetick=c(2,5,10),y.logfinetick=c(10))
-	
+par(op)	
 }
 \keyword{dplot}

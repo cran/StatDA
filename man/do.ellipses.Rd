@@ -12,6 +12,9 @@ do.ellipses(acov, pos, ...)
   \item{pos}{ the location of the ellipse }
   \item{\dots}{ further graphical parameter for the ellipses}
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
   The correlation matrix of the given covariance is computed and the resulting ellipse is plotted. The radi is computed with the singular value decomposition and the cos/sin is calculated for 100 different degrees.
 }

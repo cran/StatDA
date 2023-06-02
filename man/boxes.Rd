@@ -45,6 +45,9 @@ mar = pmin(par("mar"), 1.1 + c(2 * axes + (xlab != ""), 2 * axes + (ylab != ""),
   \item{plot}{ logical, if 'FALSE', nothing is plotted }
   \item{\dots}{ further arguments, passed to the first call of 'plot()' }
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
   This type of graphical approach for multivariate data is only applicable where the data can be grouped into three clusters. This means that before the plot can be made the data undergo a hierarchical cluster to get the size of each cluster. The distance measure for the hierarchicla cluster is complete linkage. Each cluster represents one side of the boxes.
 }

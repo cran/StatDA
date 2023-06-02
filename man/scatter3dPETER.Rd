@@ -41,6 +41,9 @@ parallel = TRUE, model.summary = FALSE)
   \item{parallel}{ if groups is not NULL, a parallel shift in the model is made }
   \item{model.summary}{ if the summary should be returned }
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
 The user can choose between a linear, quadratic, smoothed or additve model to calculate the coefficients.
 }

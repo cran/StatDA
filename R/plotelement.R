@@ -10,7 +10,8 @@ p=ncol(da.object$means)
 # variable names
 varnam=dimnames(da.object$means)[[2]]
 
-par(mfrow=c(ngroups,1),mar=c(2,4,4,2))
+oldpar <- par(mfrow=c(ngroups,1),mar=c(2,4,4,2))
+on.exit(par(oldpar))
 
 lim=max(1,0.2+max(abs(da.object$means)))
 

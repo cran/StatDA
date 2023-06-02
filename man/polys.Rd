@@ -34,6 +34,9 @@ add = FALSE, plot = TRUE, ...)
   \item{plot}{ nothing is plotted }
   \item{\dots}{further graphical parameters}
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
 Each polygon represents one row of the input x. For the variables the values are computed and then those values are connected with a polygon. The location of the polygons can be defined by the user.
 }

@@ -28,7 +28,8 @@ function(x, y, z, zname = deparse(substitute(z)), caname = deparse(substitute(z)
 	#
 
 
-par(mar=c(4,6,4,2))
+oldpar <- par(mar=c(4,6,4,2))
+on.exit(par(oldpar))
 u <- na.exclude(cbind(x, y, abs(z)))
 
 dx <- (max(u[, 1]) - min(u[, 1]))/ngrid
@@ -62,7 +63,8 @@ xlim <- range(znew)
 
 # Concentration area plot:
 
-par(mar=c(4,6,4,2))
+oldpar <- par(mar=c(4,6,4,2))
+on.exit(par(oldpar))
 conc <- znew[order(znew)]
 cumarea <- seq(1, length(znew))/length(znew) * 100
 

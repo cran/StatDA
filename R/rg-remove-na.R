@@ -8,7 +8,7 @@ function(xx)
 	if(any(wna)) {
 		x <- xx[!wna]
 		nna <- sum(wna)
-		cat(" ", nna, "NA (missing) values removed from input vector\n")
+	#	cat(" ", nna, "NA (missing) values removed from input vector\n")
 	}
 	else x <- xx
 	invisible(list(x = x, nna = nna))

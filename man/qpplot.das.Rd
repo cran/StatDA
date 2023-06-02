@@ -29,6 +29,9 @@ ylim = NULL, gridy = TRUE, add.plot = FALSE, col = 1, ...)
   \item{add.plot}{ if TRUE the new plot is added to an old one }
   \item{\dots}{ futher arguments for the probability function}
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
 First the probability of the sorted input x is computed and than the selected quantiles are calculated and after that plot is produced.
 If probs=NULL then the 1\%, 5\%, 10\%, 20\%,...., 90\%, 95\% and 99\% quantile is taken.

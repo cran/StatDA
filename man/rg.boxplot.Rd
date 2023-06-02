@@ -19,6 +19,9 @@ wend = 0.05, xlim = NULL, main = " ", colr = 5, ...)
   \item{colr}{ the box is infilled with a yellow ochre; if no colour is required set colr=0 }
   \item{\dots}{ further graphical parameters for the plot}
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
 As the x-axis is shortend by setting xlim, however, the statistics used to define the boxplot, or box-and-whisker plot, are still based on the total data set. To plot a truncated data set create a subset first, or use the x[x<some.value] construct in the call.
 }

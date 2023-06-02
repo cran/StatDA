@@ -21,11 +21,11 @@ function(x, main = deparse(substitute(x)))
 	wts <- numeric(n)
 	wts[1:n] <- 1
 	nc <- n
-	cat("  n =", n, "\tnc =", n, "\tp =", p, "\t\tnc/p =", round(nc/p, 2), "\n")
-	if(nc <= 5 * p)
-		cat("  *** Proceed with Care, n is < 5p ***\n")
-	if(nc <= 3 * p)
-		cat("  *** Proceed With Great Care, n = ", n, ", which is < 3p ***\n")
+	#cat("  n =", n, "\tnc =", n, "\tp =", p, "\t\tnc/p =", round(nc/p, 2), "\n")
+	#if(nc <= 5 * p)
+	#	cat("  *** Proceed with Care, n is < 5p ***\n")
+	#if(nc <= 3 * p)
+	#	cat("  *** Proceed With Great Care, n = ", n, ", which is < 3p ***\n")
 	# Compute means & SDs, and standardize the data set.  Note cov.wt() is used in order
 	# to have cov and r entries for the saved object
 	save <- cov.wt(x, wt = wts, cor = TRUE)
@@ -64,7 +64,7 @@ function(x, main = deparse(substitute(x)))
 		epm <- 1 - pchisq(md, p)
 	}
 	else {
-		cat("  Lowest eigenvalue < 10^-4, Mahalanobis distances not computed\n")
+	#	cat("  Lowest eigenvalue < 10^-4, Mahalanobis distances not computed\n")
 		md <- NULL
 		ppm <- NULL
 		epm <- NULL

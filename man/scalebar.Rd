@@ -15,6 +15,9 @@ sizetext)
   \item{shiftkm}{ how far from the last point the label should be written }
   \item{sizetext}{ expansion factor for the text }
 }
+\value{
+  No return value, creates a plot.
+}
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
    Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
 \author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>

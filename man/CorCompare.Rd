@@ -21,6 +21,9 @@ cex.label = 1.1, cex.legend = 1.2, lwd.legend = 1.2, cex.cor = 1, ...)
 \details{
 The ellipses are plotted with the function do.ellipses. Therefore the radius is calculated with singular value decomposition.
 }
+\value{
+  No return value, creates a plot.
+}
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
    Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
 \author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>
@@ -28,13 +31,13 @@ The ellipses are plotted with the function do.ellipses. Therefore the radius is 
 \examples{
 data(chorizon)
 x=chorizon[,c("Ca","Cu","Mg","Na","P","Sr","Zn")]
-par(mfrow=c(1,1),mar=c(4,4,2,0))
+op <- par(mfrow=c(1,1),mar=c(4,4,2,0))
 R=robustbase::covMcd(log10(x),cor=TRUE)$cor
 P=cor(log10(x))
 
 CorCompare(R,P,labels1=dimnames(x)[[2]],labels2=dimnames(x)[[2]],
 method1="Robust",method2="Pearson",ndigits=2, cex.label=1.2)
-
+par(op)
 }
 \keyword{univar}
 \keyword{multivariate}

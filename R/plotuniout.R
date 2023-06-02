@@ -14,8 +14,8 @@ function (x, symb = FALSE, quan = 1/2, alpha = 0.025,bw=FALSE,
         stop("x must be at least two-dimensional")
     if (ncol(x) > 10) 
         stop("x should not be more than 10-dimensional")
-    par(mfrow = c(1, ncol(x)), mai = c(0.6, 0, 0.6, 0), oma = c(0, 
-        3, 0, 3))
+    oldpar <- par(mfrow = c(1, ncol(x)), mai = c(0.6, 0, 0.6, 0), oma = c(0, 3, 0, 3))
+    on.exit(par(oldpar))
     rob <- covMcd(x, alpha = quan)
     xarw <- arw(x, rob$center, rob$cov, alpha = alpha)
     if (xarw$cn != Inf) {
@@ -42,7 +42,8 @@ function (x, symb = FALSE, quan = 1/2, alpha = 0.025,bw=FALSE,
                 xaxt = "n", type="n", cex.main=1.5,  ...)
 	    points(x.uni[o],sx[o,i], pch=pch2[1],cex=cex2[1],col=col2[1])
             points(x.uni[!o],sx[!o,i], pch=pch2[2],cex=cex2[2],col=col2[2])
-            par(yaxt = "n")
+            oldpar1 <- par(yaxt = "n")
+            on.exit(par(oldpar1))
             abline(h = 0, lty = "dotted")
             l <- list(outliers = o, md = rd)
         }
@@ -68,7 +69,8 @@ function (x, symb = FALSE, quan = 1/2, alpha = 0.025,bw=FALSE,
                     i], main = dimnames(x)[[2]][i], xlim = c(-1.2, 
                     1.2), ylim = c(r[1], r[2]), xlab = "", ylab = "Scaled Data", 
                     xaxt = "n", type = "n", ...)
-                  par(yaxt = "n")
+                  oldpar2 <- par(yaxt = "n")
+                  on.exit(par(oldpar2))
                   points(runif(nrow(x), min = -1, max = 1)[rd >= 
                     alpha[j]], sx[rd >= alpha[j], i], pch = lpch[j], 
                     cex = lcex[j], col = rbcol[rd >= alpha[j]])
@@ -92,6 +94,7 @@ function (x, symb = FALSE, quan = 1/2, alpha = 0.025,bw=FALSE,
         }
         l <- list(outliers = o, md = rd, euclidean = eucl)
     }
-    par(yaxt = "s")
+    oldpar3 <- par(yaxt = "s")
+    on.exit(par(oldpar3))
     l
 }

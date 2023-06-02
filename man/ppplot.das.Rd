@@ -15,6 +15,9 @@ ppplot.das(x, pdist = pnorm, xlab = NULL, ylab = "Probability", line = TRUE,
   \item{line}{if a regression line should be added}
   \item{\dots}{ further parameters for the probability function}
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
 The empirical probability is calculated and compared with the comparison distribution.
 }

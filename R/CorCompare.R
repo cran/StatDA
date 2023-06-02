@@ -11,7 +11,8 @@ function (cor1, cor2, labels1, labels2, method1, method2, ndigits = 4,
 # rest ... other graphics parameters
 #
     plot.new()
-    par(mar = rep(1, 4))
+    oldpar <- par(mar = rep(1, 4))
+    on.exit(par(oldpar))
     p = ncol(cor1)
     lim = c(-1, p + 1)
     plot.window(xlim = lim, ylim = lim, xaxs = "i", yaxs = "i")

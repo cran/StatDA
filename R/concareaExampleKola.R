@@ -27,7 +27,8 @@ function(x, y, z, zname = deparse(substitute(z)), caname = deparse(substitute(z)
 	# If a "black and white" image is required for monochrome publication set ifbw = T. 
 	#
 
-par(mar=c(4,6,4,2))
+oldpar <- par(mar=c(4,6,4,2))
+on.exit(par(oldpar))
 u <- na.exclude(cbind(x, y, abs(z)))
 
 dx <- (max(u[, 1]) - min(u[, 1]))/ngrid
@@ -77,7 +78,8 @@ title(paste("Gridded data (n = ",length(znew),")",sep=""))
 im.br=quantile(u[,3],seq(from=0,to=1,by=0.01))
 im.col=gray(seq(from=0.1,to=0.9,length=length(im.br)-1))
 
-par(mar=c(1.5,1.5,1.5,1.5))
+oldpar <- par(mar=c(1.5,1.5,1.5,1.5))
+on.exit(par(oldpar))
 plot(u[,1],u[,2],frame.plot=FALSE,xaxt="n",yaxt="n",xlab="",ylab="",type="n")
 #image(new$x,new$y,whichdraw,breaks=im.br,col=im.col, add = TRUE,cex.lab=1.2)
 image(new$xyz.est$x,new$xyz.est$y,whichdraw,breaks=im.br,col=im.col, add = TRUE,cex.lab=1.2)
@@ -99,7 +101,8 @@ text(8.35e5,79e5,"mg/kg",cex=0.8)
 
 # Concentration area plot:
 
-par(mar=c(4,6,4,2))
+oldpar <- par(mar=c(4,6,4,2))
+on.exit(par(oldpar))
 	conc <- znew[order(znew)]
 	cumarea <- seq(1, length(znew))/length(znew) * 100
 	if(!ifrev) {

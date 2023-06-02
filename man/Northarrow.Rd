@@ -20,6 +20,9 @@ Tcex)
   \item{Alwd}{ The line width, a positive number }
   \item{Tcex}{ numeric character expansion factor }
 }
+\value{
+  No return value, creates a plot.
+}
 \references{ C. Reimann, P. Filzmoser, R.G. Garrett, and R. Dutter: Statistical Data Analysis
    Explained. Applied Environmental Statistics with R. John Wiley and Sons, Chichester, 2008. }
 \author{ Peter Filzmoser <\email{P.Filzmoser@tuwien.ac.at}>

@@ -41,9 +41,9 @@ litolog[lit==7] <- 4
 litolog <- litolog[!is.na(litolog)]
 litolog <- factor(litolog, labels=c("AB","PG","AR","LPS"))
 
-par(mfrow=c(1,1),mar=c(0.1,0.1,0.1,0.1))
+op <- par(mfrow=c(1,1),mar=c(0.1,0.1,0.1,0.1))
 CorGroups(log10(x), grouping=litolog, labels1=dimnames(x)[[2]],labels2=dimnames(x)[[2]],
 legend=c("Caledonian Sediments","Basalts","Alkaline Rocks","Granites"),ndigits=2)
-
+par(op)
 }
 \keyword{ multivariate}

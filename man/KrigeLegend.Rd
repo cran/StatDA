@@ -35,6 +35,9 @@ leg.perc.yshift = 20000, tit.xshift = 35000)
   \item{leg.perc.yshift}{ y-shift of numbers in legend relative to leg.ypos.max }
   \item{tit.xshift}{ x-shift of title in legend relative to leg.xpos.max }
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
 Based on a variogram model a interpolation of the spatial data is computed. The variogram has to be provided by the user and based on this model the spatial prediction is made. To distinguish between different values every predicted value is plotted in his own scale of the choosen colour.
 }

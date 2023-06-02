@@ -28,6 +28,9 @@ qqplot.das(x, distribution = "norm", ylab = deparse(substitute(x)),
   \item{ylim}{ the range for the y-axis}
   \item{\dots}{ further arguments for the probability function}
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
 The probability of the input data is computed and with this result the quantiles of the comparison distribution are calculated. If line="quartiles" a line based on quartiles is plotted and if line="robust" a robust LM model is calculated.
 }

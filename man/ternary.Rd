@@ -13,6 +13,9 @@ ternary(x, nam = NULL, grid = FALSE, ...)
   \item{grid}{ if TRUE the grid should be plotted }
   \item{\dots}{ further graphical parameters, see par }
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
 The relative proportion of each variable is computed and those points are plotted into the graphic.
 }

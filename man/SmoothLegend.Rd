@@ -35,6 +35,9 @@ leg.perc.yshift = 20000, tit.xshift = 35000)
   \item{leg.perc.yshift}{ y-shift of "Percentile" in legend relative to leg.ypos.max }
   \item{tit.xshift}{ x-shift of title in legend relative to leg.xpos.max }
 }
+\value{
+  No return value, creates a plot.
+}
 \details{
 First a interpolation is applied using different versions of algorithms from Akima and then all points a distinguished into inside an outside the polygonal region. Now the empirical quantiles for points inside the polygon are computed and then the values are plotted in different scales of the choosen colour.
   ATTENTION: here borders were defined for the smoothing region
